@@ -6,25 +6,18 @@
 using namespace std;
 
 class openpy{
-	private:
-		
+	private:	
 		string file;
-	
-	public:
-		
-		openpy(string);
-		
-		string read(string);
-		
+	public:	
+		openpy(string);	
+		string read(string);	
 		void write(string,string);
 };
 
 openpy::openpy(string _file){
 	file = _file;
-	
 }
 	
-
 string openpy::read(string mode){
 	ifstream archivo;
 	if(mode == "r"){
@@ -52,8 +45,7 @@ string openpy::read(string mode){
 	
 }
 void openpy::write(string data,string mode){
-	ofstream archivo;
-	
+	ofstream archivo;	
 	if(mode == "w"){
 		archivo.open(file,ios::out);
 	}
